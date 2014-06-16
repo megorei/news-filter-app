@@ -1,0 +1,12 @@
+#tag_new.modal.fade
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+          | &times;
+        h4.modal-title Add Tag
+      .modal-body
+        .form-group
+          = input type="text" placeholder="Tag title" class="form-control" value=title
+        .form-group
+          button{action "create"} type="button" class="btn btn-primary" data-dismiss="modal" data-target="#tag_new" Save

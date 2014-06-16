@@ -1,0 +1,28 @@
+header.navbar.navbar-default
+  .navbar-header
+    button.navbar-toggle type="button" data-toggle="collapse" data-target="#navbar-collapse"
+      span.sr-only Toggle navigation
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+    = link-to 'index' class="navbar-brand"
+      = view.appName
+  .collapse.navbar-collapse#navbar-collapse
+    ul.nav.navbar-nav
+      li
+    ul.nav.navbar-nav.navbar-right
+      li
+        .navbar-form
+          button{action 'logout' } class='btn btn-default' Logout
+section.container
+  if loginFailed
+    .alert.alert-danger Invalid username or password.
+  .row
+    .col-xs-12.col-sm-8.col-md-8
+      = outlet
+      = outlet 'dialog'
+    .col-xs-12.col-sm-4.col-md-4
+      = outlet 'tags'
+      = outlet 'feeds'
+
+footer

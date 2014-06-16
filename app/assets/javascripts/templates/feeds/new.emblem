@@ -1,0 +1,14 @@
+#feed_new.modal.fade
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+          | &times;
+        h4.modal-title Add Feed
+      .modal-body
+        .form-group
+          = input type="text" placeholder="Title" class="form-control" value=title
+        .form-group
+          = input type="text" placeholder="http://url-to-feed" class="form-control" value=url
+        .form-group
+          button{action "create"} type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#feed_tags" Save & continue

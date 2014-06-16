@@ -1,0 +1,8 @@
+form class="form-horizontal"
+  .form-group
+    = input value=email type="text" placeholder="E-mail"
+
+  .form-group
+    = input value=password type="password" placeholder="Password"
+  .form-group
+    button{action "createSession"} type="button"  class="btn btn-default" Log in

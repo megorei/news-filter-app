@@ -1,0 +1,10 @@
+= outlet
+.panel.panel-default.tags
+  .panel-heading
+    h3.panel-title Tags
+  .panel-body
+    each arrangedContent
+      button.btn.btn-default.btn-xs{action toggleTag this} type='button' class=this.selected:btn-success = title
+  .panel-footer
+    button.btn.btn-success.btn-xs{action newTag this}
+      span.glyphicon.glyphicon-plus

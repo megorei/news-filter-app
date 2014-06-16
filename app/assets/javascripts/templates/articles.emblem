@@ -1,0 +1,27 @@
+.scopes.container.text-center
+  .btn-group
+    button.btn.btn-default type='button' click="changeScope 'best'" class=scopeBest:btn-success Best
+    button.btn.btn-default type='button' click="changeScope 'all'"  class=scopeAll:btn-success All
+    button.btn.btn-default type='button' click="changeScope 'my'"   class=scopeMy:btn-success My
+if arrangedContent.length
+  table.table.table-striped
+    tbody
+      each arrangedContent
+        tr.article class=favorite:info
+          td
+            h3
+              small.feed-title
+                = feed.title
+              small.published_at
+                = formattedDate publishedAt
+              br
+              a href=url target="_blank"
+                = title
+            p
+              = description
+          td.actions
+            a click="toggleFavorite this" href="" class=favorite:text-info:text-muted
+              .glyphicon.glyphicon-thumbs-up
+            %span.badge = likesCount
+else
+  p.text-info No articles

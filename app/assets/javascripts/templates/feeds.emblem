@@ -1,0 +1,19 @@
+= outlet
+.panel.panel-default.feeds
+  .panel-heading
+    h3.panel-title Feeds
+  table.table.table-striped
+    tbody
+      each arrangedContent
+        tr
+          td
+            a.btn click="toggleFeed this" href="" class=selected:btn-success = title
+          td.text-right.actions
+            a click="editFeed this" href=""
+              span.glyphicon.glyphicon-pencil
+            a click="delete this" href=""
+              span.glyphicon.glyphicon-remove
+
+  .panel-footer
+    button.btn.btn-success.btn-xs{action newFeed this}
+      span.glyphicon.glyphicon-plus
